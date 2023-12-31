@@ -10,6 +10,7 @@ use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\PostRector\Rector\NameImportingPostRector;
 use Rector\Set\ValueObject\SetList;
+use Rector\Transform\Rector\Assign\PropertyFetchToMethodCallRector;
 use Ssch\TYPO3Rector\Configuration\Typo3Option;
 use Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v9\v0\FileIncludeToImportStatementTypoScriptRector;
 use Ssch\TYPO3Rector\Rector\General\ConvertImplicitVariablesToExplicitGlobalsRector;
@@ -70,6 +71,7 @@ return static function (RectorConfig $rectorConfig): void {
         NewlineAfterStatementRector::class,
         UnSpreadOperatorRector::class,
         NewlineBeforeNewAssignSetRector::class,
+        PropertyFetchToMethodCallRector::class,
     ]);
 
     // If you have trouble that rector cannot run because some TYPO3 constants are not defined add an additional constants file
