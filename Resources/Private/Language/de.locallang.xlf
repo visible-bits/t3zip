@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:t3zip/Resources/Private/Language/locallang" date="2023-12-31T12:37:25Z" product-name="t3zip">
+        <header/>
+        <body>
+            <trans-unit id="tx_t3zip.be.context_menu_label_unzip" resname="tx_t3zip.be.context_menu_label_unzip">
+                <source>Unzip</source>
+                <target>Unzip (entpacken)</target>
+            </trans-unit>
+            <trans-unit id="tx_t3zip.be.context_menu_label_unzip_success_head" resname="tx_t3zip.be.context_menu_label_unzip_success_head">
+                <source>File unzipped!</source>
+                <target>Datei entpackt</target>
+            </trans-unit>
+            <trans-unit id="tx_t3zip.be.context_menu_label_unzip_success_sub" resname="tx_t3zip.be.context_menu_label_unzip_success_sub">
+                <source>Successfuly extracted X files</source>
+                <target>X Dateien wurden erfolgreich entpackt</target>
+            </trans-unit>
+            <trans-unit id="tx_t3zip.be.flash_message_extract_folder_exists" resname="tx_t3zip.be.flash_message_extract_folder_exists">
+                <source>Target folder already exists</source>
+                <target>Der Zielordner existiert bereits</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

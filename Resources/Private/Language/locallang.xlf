@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-12-02T11:47:10Z" product-name="t3zip">
+        <header/>
+        <body>
+            <trans-unit id="tx_t3zip.be.context_menu_label_unzip" resname="tx_t3zip.be.context_menu_label_unzip">
+                <source>Unzip</source>
+            </trans-unit>
+            <trans-unit id="tx_t3zip.be.context_menu_label_unzip_success_head" resname="tx_t3zip.be.context_menu_label_unzip_success_head">
+                <source>File unzipped!</source>
+            </trans-unit>
+            <trans-unit id="tx_t3zip.be.context_menu_label_unzip_success_sub" resname="tx_t3zip.be.context_menu_label_unzip_success_sub">
+                <source>Successfuly extracted X files</source>
+            </trans-unit>
+            <trans-unit id="tx_t3zip.be.flash_message_extract_folder_exists" resname="tx_t3zip.be.flash_message_extract_folder_exists">
+                <source>Target folder already exists</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

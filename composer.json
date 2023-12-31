@@ -1,0 +1,46 @@
+{
+    "name": "vibi/t3zip",
+    "type": "typo3-cms-extension",
+    "description": "Unzip and zip files in the filelist module",
+    "keywords": [
+        "TYPO3",
+        "t3zip",
+        "zip",
+        "fal"
+    ],
+    "homepage": "https://github.com/visible-bits/t3zip",
+    "authors": [
+        {
+            "name": "Michael Kettel",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-core": "^11",
+        "typo3/cms-recordlist": "^11.5",
+        "typo3/cms-backend": "^11.5",
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.9",
+        "phpstan/phpstan-strict-rules": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "squizlabs/php_codesniffer": "^3.7",
+        "cakephp/cakephp-codesniffer": "^5.0",
+        "ssch/typo3-rector": "^1.2"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "t3zip"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Vibi\\T3zip\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/t3zip": "self.version"
+    }
+}

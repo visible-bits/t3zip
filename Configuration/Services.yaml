@@ -1,0 +1,8 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Vibi\T3zip\Controller\File\FileUnzipController:
+    tags: ["backend.controller"]

@@ -1,0 +1,2 @@
+# cat=basic/enable; type=boolean; label= Do not(!) add extracted files to index (sys_file entries)
+doNotAddExtractedToSysFile =
