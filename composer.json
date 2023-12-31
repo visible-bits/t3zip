@@ -11,8 +11,9 @@
     "homepage": "https://github.com/visible-bits/t3zip",
     "authors": [
         {
-            "name": "Michael Kettel",
-            "role": "Developer"
+            "name": "Mike",
+            "role": "Developer",
+            "email": "info@visiblebits.de"
         }
     ],
     "license": "GPL-2.0-or-later",
