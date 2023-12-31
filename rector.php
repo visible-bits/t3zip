@@ -25,13 +25,13 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         Typo3LevelSetList::UP_TO_TYPO3_11,
         //˚SetList::DEAD_CODE,
-        SetList::PHP_82,
+        SetList::PHP_81,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
     ]);
 
     // Define your target version which you want to support
-    $rectorConfig->phpVersion(PhpVersion::PHP_82);
+    $rectorConfig->phpVersion(PhpVersion::PHP_81);
 
     // If you only want to process one/some TYPO3 extension(s), you can specify its path(s) here.
     // If you use the option --config change __DIR__ to getcwd()
@@ -58,6 +58,8 @@ return static function (RectorConfig $rectorConfig): void {
         //__DIR__ . '/public/*',
         __DIR__ . '/.github/*',
         __DIR__ . '/.Build/*',
+        '**/typo3/index.php',
+        '**/public/index.php',
         NameImportingPostRector::class => [
             //'ext_localconf.php',
             //'ext_tables.php',
