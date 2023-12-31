@@ -30,6 +30,13 @@
         "cakephp/cakephp-codesniffer": "^5.0",
         "ssch/typo3-rector": "^1.2"
     },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
     "extra": {
         "typo3/cms": {
             "extension-key": "t3zip"
