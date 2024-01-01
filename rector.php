@@ -61,6 +61,7 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/.Build/*',
         '**/typo3/index.php',
         '**/public/index.php',
+        '**/public/typo3/*',
         NameImportingPostRector::class => [
             //'ext_localconf.php',
             //'ext_tables.php',
