@@ -26,13 +26,13 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         Typo3LevelSetList::UP_TO_TYPO3_11,
         //˚SetList::DEAD_CODE,
-        SetList::PHP_81,
+        SetList::PHP_82,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
     ]);
 
     // Define your target version which you want to support
-    $rectorConfig->phpVersion(PhpVersion::PHP_81);
+    $rectorConfig->phpVersion(PhpVersion::PHP_82);
 
     // If you only want to process one/some TYPO3 extension(s), you can specify its path(s) here.
     // If you use the option --config change __DIR__ to getcwd()
@@ -73,7 +73,7 @@ return static function (RectorConfig $rectorConfig): void {
         NewlineBeforeNewAssignSetRector::class,
 
         // TODO: Remove this when github workflows are fixed
-        //PropertyFetchToMethodCallRector::class,
+        PropertyFetchToMethodCallRector::class,
     ]);
 
     // If you have trouble that rector cannot run because some TYPO3 constants are not defined add an additional constants file
