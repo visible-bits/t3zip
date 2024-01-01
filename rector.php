@@ -71,9 +71,6 @@ return static function (RectorConfig $rectorConfig): void {
         NewlineAfterStatementRector::class,
         UnSpreadOperatorRector::class,
         NewlineBeforeNewAssignSetRector::class,
-
-        // TODO: Remove this when github workflows are fixed
-        PropertyFetchToMethodCallRector::class,
     ]);
 
     // If you have trouble that rector cannot run because some TYPO3 constants are not defined add an additional constants file
