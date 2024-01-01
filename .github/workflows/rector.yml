@@ -16,8 +16,8 @@ jobs:
 
     strategy:
       matrix:
-        operating-system: [ubuntu-22.04]
-        #operating-system: [ubuntu-latest]
+        #operating-system: [ubuntu-22.04]
+        operating-system: [ubuntu-latest]
         #php-version: ['8.1', '8.2']
         php-version: ['8.2']
 
@@ -34,5 +34,5 @@ jobs:
 
       - run: composer validate
       - run: composer install --no-progress
-      - run: vendor/bin/rector process --dry-run
-      #- run: vendor/bin/phpstan analyse -c phpstan.neon
+      #- run: vendor/bin/rector process --dry-run
+      - run: vendor/bin/rector process --dry-run --debug

@@ -2,13 +2,14 @@
     "name": "vibi/t3zip",
     "type": "typo3-cms-extension",
     "description": "Unzip and zip files in the filelist module",
+    "homepage": "https://github.com/visible-bits/t3zip",
+    "license": "GPL-2.0-or-later",
     "keywords": [
         "TYPO3",
         "t3zip",
         "zip",
         "fal"
     ],
-    "homepage": "https://github.com/visible-bits/t3zip",
     "authors": [
         {
             "name": "Mike",
@@ -16,7 +17,6 @@
             "email": "info@visiblebits.de"
         }
     ],
-    "license": "GPL-2.0-or-later",
     "require": {
         "typo3/cms-core": "^11",
         "typo3/cms-recordlist": "^11.5",
