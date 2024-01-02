@@ -46,7 +46,7 @@ class ItemProvider extends AbstractProvider
             'type' => 'item',
             'label' => 'LLL:EXT:t3zip/Resources/Private/Language/locallang.xlf:tx_t3zip.be.context_menu_label_unzip',
             'iconIdentifier' => 'actions-t3zip-unzip',
-            'callbackAction' => 'unpackFile',
+            'callbackAction' => 'unzipFile',
         ],
     ];
 

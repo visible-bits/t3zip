@@ -13,12 +13,12 @@ define(function () {
     var ContextMenuActions = {};
 
     /**
-     * Say hello
+     * unzip
      *
      * @param {string} table
      * @param {int} uid of the page
      */
-    ContextMenuActions.unpackFile = function (table, uid) {
+    ContextMenuActions.unzipFile = function (table, uid) {
         if (table === 'sys_file') {
             //If needed, you can access other 'data' attributes here from $(this).data('someKey')
             //see item provider getAdditionalAttributes method to see how to pass custom data attributes
@@ -27,7 +27,6 @@ define(function () {
             var label_success_sub = $(this).data('label_success_sub');
 
             uid = encodeURIComponent(uid);
-            console.log('Unpack file uid: ', uid);
             var url = TYPO3.settings.ajaxUrls['vibi_unpack_contextmenu_unzip'];
             //url += '&file=' + top.rawurlencode(uid);
             url += '&file=' + uid;
@@ -35,7 +34,8 @@ define(function () {
             $.ajax(url).always(function (data) {
                 //top.nav_frame.location.reload(true);
                 //top.list_frame.location.reload(true);
-                console.log('Unpack file: ', data);
+                //console.log('Unpack data: ', data);
+                //console.log('Unpack uid: ', uid);
 
                 top.TYPO3.Backend.NavigationContainer.refresh(true);
                 top.TYPO3.Backend.ContentContainer.refresh(true);
