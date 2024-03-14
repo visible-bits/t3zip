@@ -34,4 +34,4 @@ Default: If a .zip file was extraxted, all files inside the extracted folder are
 All localized strings can be translated via the default TYPO3 process (see EXT:t3zip/Resources/Private/Language/locallang.xlf)
 
 ## Participate
-Add issues, pull-requests or just explore the project on [GitHub](https://github.com/visible-bits/t3zip).
+Add issues, pull-requests or just explore the project on [GitHub](https://github.com/visible-bits/t3zip)
