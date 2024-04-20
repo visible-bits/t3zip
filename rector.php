@@ -3,14 +3,12 @@
 declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\ClassMethod\NewlineBeforeNewAssignSetRector;
-use Rector\CodingStyle\Rector\ClassMethod\UnSpreadOperatorRector;
 use Rector\CodingStyle\Rector\Stmt\NewlineAfterStatementRector;
 use Rector\Config\RectorConfig;
 use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\PostRector\Rector\NameImportingPostRector;
 use Rector\Set\ValueObject\SetList;
-use Rector\Transform\Rector\Assign\PropertyFetchToMethodCallRector;
 use Ssch\TYPO3Rector\Configuration\Typo3Option;
 use Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v9\v0\FileIncludeToImportStatementTypoScriptRector;
 use Ssch\TYPO3Rector\Rector\General\ConvertImplicitVariablesToExplicitGlobalsRector;
@@ -32,7 +30,6 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
 
     // Define your target version which you want to support
-    $rectorConfig->phpVersion(PhpVersion::PHP_82);
 
     // If you only want to process one/some TYPO3 extension(s), you can specify its path(s) here.
     // If you use the option --config change __DIR__ to getcwd()
@@ -70,7 +67,6 @@ return static function (RectorConfig $rectorConfig): void {
             //__DIR__ . '/**/Configuration/**/*.php',
         ],
         NewlineAfterStatementRector::class,
-        UnSpreadOperatorRector::class,
         NewlineBeforeNewAssignSetRector::class,
     ]);
 
@@ -100,6 +96,7 @@ return static function (RectorConfig $rectorConfig): void {
         \Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v10\v0\ExtbasePersistenceTypoScriptRector::FILENAME => __DIR__ . '/packages/acme_demo/Configuration/Extbase/Persistence/Classes.php',
     ]); */
     // Add some general TYPO3 rules
+    /*
     $rectorConfig->rule(ConvertImplicitVariablesToExplicitGlobalsRector::class);
     $rectorConfig->ruleWithConfiguration(ExtEmConfRector::class, [
         ExtEmConfRector::ADDITIONAL_VALUES_TO_BE_REMOVED => [],
@@ -108,4 +105,5 @@ return static function (RectorConfig $rectorConfig): void {
     // Modernize your TypoScript include statements for files and move from <INCLUDE /> to @import use the FileIncludeToImportStatementVisitor (introduced with TYPO3 9.0)
     //$rectorConfig->rule(\Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v9\v0\FileIncludeToImportStatementTypoScriptRector::class);
     $rectorConfig->rule(FileIncludeToImportStatementTypoScriptRector::class);
+    */
 };

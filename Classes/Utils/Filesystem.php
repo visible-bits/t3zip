@@ -20,7 +20,7 @@ class Filesystem
         }
 
         while (($file = \readdir($dir))) {
-            if (($file != '.') && ($file != '..')) {
+            if (($file !== '.') && ($file !== '..')) {
                 if (\is_dir($src . '/' . $file)) {
                     $this->recursiveCopyFolder($src . '/' . $file, $dst . '/' . $file);
                 } else {
@@ -109,7 +109,7 @@ class Filesystem
         }
 
         foreach ($scandir as $item) {
-            if ($item == '.' || $item == '..') {
+            if ($item === '.' || $item === '..') {
                 continue;
             }
 
