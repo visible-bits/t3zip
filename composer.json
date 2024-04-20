@@ -4,6 +4,7 @@
     "description": "Unzip and zip files in the filelist module",
     "homepage": "https://github.com/visible-bits/t3zip",
     "license": "GPL-2.0-or-later",
+    "version": "1.0.0",
     "keywords": [
         "TYPO3",
         "t3zip",
