@@ -34,5 +34,5 @@ jobs:
 
       - run: composer validate
       - run: composer install --no-progress
-      - run: vendor/bin/rector process --dry-run
-      #- run: vendor/bin/rector process --dry-run --debug
+      #- run: vendor/bin/rector process --dry-run
+      - run: vendor/bin/rector process --dry-run --debug
