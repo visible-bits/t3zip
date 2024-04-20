@@ -37,7 +37,6 @@ return static function (RectorConfig $rectorConfig): void {
     // If you use importNames(), you should consider excluding some TYPO3 files.
     $rectorConfig->skip([
         // @see https://github.com/sabbelasichon/typo3-rector/issues/2536
-        __DIR__ . '/Classes/ContextMenu/ItemProviders/ItemProvider.php',
         __DIR__ . '/**/Configuration/ExtensionBuilder/*',
         // We skip those directories on purpose as there might be node_modules or similar
         // that include typescript which would result in false positive processing
