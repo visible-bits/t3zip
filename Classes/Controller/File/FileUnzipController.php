@@ -95,7 +95,7 @@ class FileUnzipController
     public function mainAction(ServerRequestInterface $request): ResponseInterface
     {
         $this->moduleTemplate = $this->moduleTemplateFactory->create($request);
-        $status =  $this->init($request);
+        $status =  $this->myInit($request);
         //$this->main();
         return new HtmlResponse($status);
     }
@@ -106,7 +106,7 @@ class FileUnzipController
      * @param ServerRequestInterface $request
      * @throws InsufficientFolderAccessPermissionsException
      */
-    public function init(ServerRequestInterface $request): string
+    public function myInit(ServerRequestInterface $request): string
     {
         $parsedBody = $request->getParsedBody();
         $queryParams = $request->getQueryParams();
