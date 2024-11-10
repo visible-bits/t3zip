@@ -27,8 +27,10 @@ class UnzipFile {
                 //console.log('Unpack data: ', data);
                 //console.log('Unpack uid: ', uid);
 
-                top.TYPO3.Backend.NavigationContainer.refresh(true);
-                top.TYPO3.Backend.ContentContainer.refresh(true);
+                top.TYPO3.Backend.ContentContainer.refresh()
+                top.document.dispatchEvent(new CustomEvent("typo3:filestoragetree:refresh"))
+                //top.TYPO3.Backend.NavigationContainer.refresh(true);
+                //top.TYPO3.Backend.ContentContainer.refresh(true);
 
                 if (data !== 'ERROR') {
                     top.TYPO3.Notification.success(label_success_head, label_success_sub, 5);
