@@ -4,9 +4,12 @@ services:
     autoconfigure: true
     public: false
 
+  Vibi\T3zip\:
+    resource: '../Classes/*'
+
   Vibi\T3zip\Controller\File\FileUnzipController:
     tags: ["backend.controller"]
 
-  Vibi\T3zip\ContextMenu\ItemProviders\ItemProvider:
-    tags:
-      - name: backend.contextmenu.itemprovider
+  #Vibi\T3zip\ContextMenu\ItemProviders\ItemProvider:
+  #  tags:
+  #    - name: backend.contextmenu.itemprovider

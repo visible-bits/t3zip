@@ -3,23 +3,25 @@
  *
  * JavaScript to handle the click action of the "unzipFile" context menu item
  */
-class ContextMenuActions {
+class UnzipFile {
 
     unzipFile(table, uid) {
 
+        console.log('UnzipFile: ', table, uid);
+
         if (table === 'sys_file') {
-            //If needed, you can access other 'data' attributes here from $(this).data('someKey')
+            //If needed, you can access other 'data' attributes here from jQuery(this).data('someKey')
             //see item provider getAdditionalAttributes method to see how to pass custom data attributes
             //top.TYPO3.Notification.error('T3zip', 'Unpacking!', 5);
-            var label_success_head = $(this).data('label_success_head');
-            var label_success_sub = $(this).data('label_success_sub');
+            var label_success_head = jQuery(this).data('label_success_head');
+            var label_success_sub = jQuery(this).data('label_success_sub');
 
             uid = encodeURIComponent(uid);
             var url = TYPO3.settings.ajaxUrls['vibi_unpack_contextmenu_unzip'];
             //url += '&file=' + top.rawurlencode(uid);
             url += '&file=' + uid;
 
-            $.ajax(url).always(function (data) {
+            jQuery.ajax(url).always(function (data) {
                 //top.nav_frame.location.reload(true);
                 //top.list_frame.location.reload(true);
                 //console.log('Unpack data: ', data);
@@ -33,9 +35,9 @@ class ContextMenuActions {
                 }
 
                 //var urlReloadFileTree = TYPO3.settings.ajaxUrls['filestorage_tree_data'];
-                //$.ajax({ url: urlReloadFileTree });
+                //jQuery.ajax({ url: urlReloadFileTree });
             });
         }
     }
 }
-export default new ContextMenuActions();
+export default new UnzipFile();

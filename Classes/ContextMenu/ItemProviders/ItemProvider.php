@@ -112,7 +112,7 @@ class ItemProvider extends AbstractProvider implements ProviderInterface
         );
 
         return [
-            'data-callback-module' => 'TYPO3/CMS/T3zip/ContextMenuActions',
+            'data-callback-module' => '@vibi/t3zip/context-menu-actions',
             'data-label_success_head' => $label_success_head,
             'data-label_success_sub' => $label_success_sub,
         ];
