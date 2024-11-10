@@ -6,3 +6,7 @@ services:
 
   Vibi\T3zip\Controller\File\FileUnzipController:
     tags: ["backend.controller"]
+
+  Vibi\T3zip\ContextMenu\ItemProviders\ItemProvider:
+    tags:
+      - name: backend.contextmenu.itemprovider

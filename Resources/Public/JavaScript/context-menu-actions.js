@@ -1,24 +1,12 @@
 /**
- * Module: TYPO3/CMS/T3zip/ContextMenuActions
+ * Module: @TYPO3/CMS/T3zip/ContextMenuActions
  *
- * JavaScript to handle the click action of the "unzip" context menu item
- * @exports TYPO3/CMS/T3zip/ContextMenuActions
+ * JavaScript to handle the click action of the "unzipFile" context menu item
  */
-define(function () {
-    'use strict';
+class ContextMenuActions {
 
-    /**
-     * @exports TYPO3/CMS/T3zip/ContextMenuActions
-     */
-    var ContextMenuActions = {};
+    unzipFile(table, uid) {
 
-    /**
-     * unzip
-     *
-     * @param {string} table
-     * @param {int} uid of the page
-     */
-    ContextMenuActions.unzipFile = function (table, uid) {
         if (table === 'sys_file') {
             //If needed, you can access other 'data' attributes here from $(this).data('someKey')
             //see item provider getAdditionalAttributes method to see how to pass custom data attributes
@@ -48,7 +36,6 @@ define(function () {
                 //$.ajax({ url: urlReloadFileTree });
             });
         }
-    };
-
-    return ContextMenuActions;
-});
+    }
+}
+export default new ContextMenuActions();
