@@ -75,7 +75,7 @@ class FileUnzipController
      * @param string $title
      * @param int $severity
      */
-    protected function addFlashMessage(string $message, string $title = '', int $severity = AbstractMessage::INFO): void
+    protected function addFlashMessage(string $message, string $title = '', int $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::INFO): void
     {
         /** @var FlashMessage $flashMessage */
         $flashMessage = GeneralUtility::makeInstance(FlashMessage::class, $message, $title, $severity, true);
