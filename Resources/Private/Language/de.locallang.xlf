@@ -12,8 +12,8 @@
                 <target>Datei entpackt</target>
             </trans-unit>
             <trans-unit id="tx_t3zip.be.context_menu_label_unzip_success_sub" resname="tx_t3zip.be.context_menu_label_unzip_success_sub">
-                <source>Successfuly extracted X files</source>
-                <target>X Dateien wurden erfolgreich entpackt</target>
+                <source>Successfuly extracted files</source>
+                <target>Dateien wurden erfolgreich entpackt</target>
             </trans-unit>
             <trans-unit id="tx_t3zip.be.flash_message_extract_folder_exists" resname="tx_t3zip.be.flash_message_extract_folder_exists">
                 <source>Target folder already exists</source>
