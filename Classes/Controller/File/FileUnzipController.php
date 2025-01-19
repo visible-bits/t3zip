@@ -158,8 +158,7 @@ class FileUnzipController
             $this->addFlashMessage(
                 $message,
                 'ERROR',
-                (int)ContextualFeedbackSeverity::ERROR,
-                false,
+                2, //ContextualFeedbackSeverity::ERROR,
             );
 
             return "ERROR";
