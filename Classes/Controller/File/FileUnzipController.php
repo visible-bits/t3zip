@@ -22,6 +22,7 @@ use TYPO3\CMS\Core\Resource\FolderInterface;
 use TYPO3\CMS\Core\Resource\Index\Indexer;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Resource\Security\FileNameValidator;
+use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use Vibi\T3zip\Utils\Filesystem;
 
@@ -75,7 +76,7 @@ class FileUnzipController
      * @param string $title
      * @param int $severity
      */
-    protected function addFlashMessage(string $message, string $title = '', int $severity = AbstractMessage::INFO): void
+    protected function addFlashMessage(string $message, string $title = '', int $severity = -1): void // \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::INFO = -1
     {
         /** @var FlashMessage $flashMessage */
         $flashMessage = GeneralUtility::makeInstance(FlashMessage::class, $message, $title, $severity, true);
@@ -95,7 +96,7 @@ class FileUnzipController
     public function mainAction(ServerRequestInterface $request): ResponseInterface
     {
         $this->moduleTemplate = $this->moduleTemplateFactory->create($request);
-        $status =  $this->init($request);
+        $status =  $this->myInit($request);
         //$this->main();
         return new HtmlResponse($status);
     }
@@ -106,7 +107,7 @@ class FileUnzipController
      * @param ServerRequestInterface $request
      * @throws InsufficientFolderAccessPermissionsException
      */
-    public function init(ServerRequestInterface $request): string
+    public function myInit(ServerRequestInterface $request): string
     {
         $parsedBody = $request->getParsedBody();
         $queryParams = $request->getQueryParams();
@@ -148,13 +149,16 @@ class FileUnzipController
 
         // check if folder to extract zip file into already exists
         // if so, return error message to ContextMenuActions.js
-        if (\is_dir($abs_path_extract_folder)) {
+        $is_dir = \is_dir($abs_path_extract_folder);
+        if ($is_dir) {
+            $message = $this->getLanguageService()->sL(
+                'LLL:EXT:t3zip/Resources/Private/Language/locallang.xlf:tx_t3zip.be.flash_message_extract_folder_exists'
+            ) . ' ' . $rel_path_extract_folder;
+
             $this->addFlashMessage(
-                $this->getLanguageService()->sL(
-                    'LLL:EXT:t3zip/Resources/Private/Language/locallang.xlf:tx_t3zip.be.flash_message_extract_folder_exists'
-                ) . ' ' . $rel_path_extract_folder,
-                '',
-                AbstractMessage::ERROR
+                $message,
+                'ERROR',
+                2, //ContextualFeedbackSeverity::ERROR,
             );
 
             return "ERROR";

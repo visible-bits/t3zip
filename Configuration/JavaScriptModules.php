@@ -8,6 +8,6 @@ return [
         'backend.contextmenu',
     ],
     'imports' => [
-        '@t3docs/examples/' => 'EXT:t3zip/Resources/Public/JavaScript/',
+        '@vibi/t3zip/' => 'EXT:t3zip/Resources/Public/JavaScript/',
     ],
 ];

@@ -19,6 +19,7 @@ declare(strict_types=1);
 namespace Vibi\T3zip\ContextMenu\ItemProviders;
 
 use TYPO3\CMS\Backend\ContextMenu\ItemProviders\AbstractProvider;
+use TYPO3\CMS\Backend\ContextMenu\ItemProviders\ProviderInterface;
 use TYPO3\CMS\Core\Resource\Exception\ResourceDoesNotExistException;
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Resource\Folder;
@@ -31,7 +32,7 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
  *
  * @internal This class is not considered part of the public TYPO3 API.
  */
-class ItemProvider extends AbstractProvider
+class ItemProvider extends AbstractProvider implements ProviderInterface
 {
     /**
      * @var File|Folder|null
@@ -111,7 +112,7 @@ class ItemProvider extends AbstractProvider
         );
 
         return [
-            'data-callback-module' => 'TYPO3/CMS/T3zip/ContextMenuActions',
+            'data-callback-module' => '@vibi/t3zip/context-menu-actions',
             'data-label_success_head' => $label_success_head,
             'data-label_success_sub' => $label_success_sub,
         ];
